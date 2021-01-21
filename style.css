@@ -1,0 +1,52 @@
+
+h2 {
+    margin: 2em 0;
+}
+
+.codex-nav {
+    margin: 0.3em;
+}
+
+.progress {
+    /* experiment with how thick the progress bar is */
+    margin-top: 0.3rem;
+    height: 0.8rem;
+}
+
+.btn-toolbar {
+    display: inline-flex;
+}
+
+.viewer {
+    width: 80%;
+    height: 25rem;
+    margin-top: 1rem;
+}
+
+.viewport {
+    background-color: black;
+    padding: 0.5rem;
+    height: 100%;
+}
+
+.viewpage {
+    max-width: 40%;
+    padding: 1rem;
+    height: 100%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+#pageNav {
+    display: flex;
+}
+
+#barContainer {
+    flex: auto;
+}
+
+
+#barContainer .progress {
+    margin-top: 0.4rem;
+    height: 1.7rem;
+}

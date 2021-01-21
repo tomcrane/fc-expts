@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex navigation experiment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Codex navigation experiment</h2>
+
+        <div class="btn-toolbar" role="toolbar" aria-label="Navigate by book, chapter and page">
+            <div class="codex-nav">
+                <div class="btn-group" role="group" aria-label="Books of the Codex">
+                    <button type="button" class="btn btn-outline-secondary pager" data-page-what="book"
+                        data-direction="prev">&lt;</button>
+                    <select class="form-select" id="bookSelect"></select>
+                    <button type="button" class="btn btn-outline-secondary pager" data-page-what="book"
+                        data-direction="next">&gt;</button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" id="bookProgress"></div>
+                </div>
+            </div>
+            <div class="codex-nav">
+                <div class="btn-group" role="group" aria-label="Chapters of the book">
+                    <button type="button" class="btn btn-outline-secondary pager"
+                        data-page-what="chapter" data-direction="prev">&lt;</button>
+                    <select class="form-select" id="chapterSelect"></select>
+                    <button type="button" class="btn btn-outline-secondary pager"
+                     data-page-what="chapter" data-direction="next">&gt;</button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" id="chapterProgress"></div>
+                </div>
+            </div>
+            <div class="codex-nav">
+                <div class="btn-group" role="group" aria-label="Pages of the chapter">
+                    <button type="button" class="btn btn-outline-secondary pager"
+                        data-page-what="page" data-direction="prev">&lt;</button>
+                    <select class="form-select" id="pageSelect"></select>
+                    <button type="button" class="btn btn-outline-secondary pager"
+                        data-page-what="page" data-direction="next">&gt;</button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" id="pageProgress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="viewer">
+            <div class="viewport">
+                <div class="viewpage" id="thePage"></div>
+            </div>
+
+            <div class="btn-toolbar w-100" role="toolbar" aria-label="Navigate by page" id="pageNav">
+                <button type="button" class="btn btn-outline-secondary pager"
+                    data-page-what="page" data-direction="prev">&lt;</button>
+                <div id="barContainer">
+                    <div class="progress w-100">
+                        <div class="progress-bar" role="progressbar" id="overallProgress"></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-secondary pager"
+                    data-page-what="page" data-direction="next">&gt;</button>
+            </div>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+        <script src="codex.js"></script>
+        <script src="viewer.js"></script>
+</body>
+
+</html>
